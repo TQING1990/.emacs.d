@@ -8,7 +8,9 @@
 
 ;;; Code:
 
-(package-initialize)
+
+;; (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 ;;(defconst *is-a-mac* (eq system-type 'darwin))
 
@@ -18,10 +20,9 @@
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f1>") 'open-my-init-file)
 
-(add-to-list 'load-path "~/.emacs.d/lisp/")
 
-;; Package Management
-;; -----------------------------------------------------------------
+;; Package
+
 (require 'init-packages)
 (require 'init-default)
 (require 'init-company)
