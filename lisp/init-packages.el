@@ -13,9 +13,11 @@
 (defvar tqing/packages '(
 			 company
 			 magit
-			 ;;swiper
-			 ;;counsel
 			 ivy
+			 swiper
+			 counsel
+			 counsel-etags
+			 counsel-gtags
 			 smartparens
 			 ;; --- Major Mode ---
 			 lua-mode

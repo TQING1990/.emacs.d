@@ -7,7 +7,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(package-selected-packages
+   (quote
+    (counsel-etags company magit ivy smartparens lua-mode exec-path-from-shell flycheck yasnippet evil evil-leader evil-surround evil-nerd-commenter monokai-theme))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

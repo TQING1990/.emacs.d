@@ -5,7 +5,39 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 
+(require 'evil)
+
 (evil-mode 1)
+
+(setq evil-emacs-state-cursor '("red" box)
+     evil-normal-state-cursor '("green" box)
+    evil-visual-state-cursor '("orange" box)
+    evil-insert-state-cursor '("red" bar)
+    evil-replace-state-cursor '("red" bar)
+    evil-operator-state-cursor '("red" hollow))
+
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+(define-key evil-normal-state-map (kbd "C-k") (lambda ()
+                                                (interactive)
+                                                (evil-scroll-up nil)))
+(define-key evil-normal-state-map (kbd "C-j") (lambda ()
+                                                (interactive)
+                                                (evil-scroll-down nil)))
+
+;; window move
+(define-key evil-normal-state-map (kbd "C-w <up>") 'windmove-up)
+(define-key evil-normal-state-map (kbd "C-w <down>") 'windmove-down)
+(define-key evil-normal-state-map (kbd "C-w <right>") 'windmove-right)
+(define-key evil-normal-state-map (kbd "C-w <left>") 'windmove-left)
+
+;; elscreen kill
+;; (define-key evil-normal-state-map (kbd "C-w d") 'elscreen-kill)
+
+;; c+ c- to increase/decrease number like Vim's C-a C-x
+(define-key evil-normal-state-map (kbd "C-+") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C--") 'evil-numbers/dec-at-pt)
 
 (require 'evil-surround)
 (global-evil-surround-mode 1)
@@ -31,6 +63,7 @@
 ;; Vim key bindings
 (require 'evil-leader)
 (global-evil-leader-mode)
+(setq evil-leader/in-all-states 1)
 (evil-leader/set-key
   "ci" 'evilnc-comment-or-uncomment-lines
   "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
@@ -41,7 +74,17 @@
   "cv" 'evilnc-toggle-invert-comment-line-by-line
   "."  'evilnc-copy-and-comment-operator
   "\\" 'evilnc-comment-operator ; if you prefer backslash key
+  "v"  'exchange-point-and-mark
 )
+
+(evil-leader/set-key "o" (lambda () ; <leader>o open line below
+                           (interactive)
+                           (evil-open-below 1)
+                           (evil-normal-state)))
+(evil-leader/set-key "O" (lambda () ; <leader>o open line above
+                           (interactive)
+                           (evil-open-above 1)
+                           (evil-normal-state)))
 
 (provide 'init-evil)
 ;;; init-evil.el ends here

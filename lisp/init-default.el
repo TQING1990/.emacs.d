@@ -20,7 +20,8 @@
 (setq auto-save-default nil)
 ;; 光标形状
 (setq-default cursor-type 'bar)
-
+;; 全屏显示
+(setq  initial-frame-alist (quote ((fullscreen . maximized))))
 
 (require 'recentf)
 (recentf-mode 1)
@@ -29,6 +30,9 @@
 (global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-h C-v") 'find-variable)
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
+
+;; 用空格代替tab，设置tab 长度为4
+(setq-default tab-width 4 indent-tabs-mode nil)
 
 (provide 'init-default)
 ;;; init-default.el ends here
