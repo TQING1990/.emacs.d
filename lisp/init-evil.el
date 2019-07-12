@@ -65,6 +65,7 @@
 (global-evil-leader-mode)
 (setq evil-leader/in-all-states 1)
 (evil-leader/set-key
+  ;; comment
   "ci" 'evilnc-comment-or-uncomment-lines
   "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
   "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
@@ -75,6 +76,15 @@
   "."  'evilnc-copy-and-comment-operator
   "\\" 'evilnc-comment-operator ; if you prefer backslash key
   "v"  'exchange-point-and-mark
+  ;; other
+  "ff" 'counsel-find-file
+  "fr" 'recentf-open-files
+  "bb" 'switch-to-buffer
+  "bk" 'kill-buffer
+  "sm" 'counsel-imenu
+  "fg" 'counsel-git
+  "bf" 'beginning-of-defun
+  "ef" 'end-of-defun
 )
 
 (evil-leader/set-key "o" (lambda () ; <leader>o open line below
