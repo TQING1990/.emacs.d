@@ -44,5 +44,8 @@
 (add-hook 'text-mode-hook 'remove-dos-eol)
 (add-hook 'prog-mode-hook 'remove-dos-eol)
 
+;; 当文件被修改，buffer自动更新
+(global-auto-revert-mode t)
+
 (provide 'init-default)
 ;;; init-default.el ends here
