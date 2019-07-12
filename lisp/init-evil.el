@@ -26,12 +26,6 @@
                                                 (interactive)
                                                 (evil-scroll-down nil)))
 
-;; window move
-(define-key evil-normal-state-map (kbd "C-w <up>") 'windmove-up)
-(define-key evil-normal-state-map (kbd "C-w <down>") 'windmove-down)
-(define-key evil-normal-state-map (kbd "C-w <right>") 'windmove-right)
-(define-key evil-normal-state-map (kbd "C-w <left>") 'windmove-left)
-
 ;; elscreen kill
 ;; (define-key evil-normal-state-map (kbd "C-w d") 'elscreen-kill)
 
