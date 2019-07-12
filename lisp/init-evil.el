@@ -13,7 +13,7 @@
      evil-normal-state-cursor '("green" box)
     evil-visual-state-cursor '("orange" box)
     evil-insert-state-cursor '("red" bar)
-    evil-replace-state-cursor '("red" bar)
+    evil-replace-state-cursor '("red" (hbar . 2))
     evil-operator-state-cursor '("red" hollow))
 
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
