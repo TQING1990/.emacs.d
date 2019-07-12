@@ -22,6 +22,8 @@
 (setq-default cursor-type 'bar)
 ;; 全屏显示
 (setq  initial-frame-alist (quote ((fullscreen . maximized))))
+;; 设置默认字体大小
+(set-face-attribute 'default nil :height 160)
 
 (require 'recentf)
 (recentf-mode 1)
