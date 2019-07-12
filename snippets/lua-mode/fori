@@ -1,0 +1,6 @@
+# key: fori
+# name: fori
+# --
+for ${1:i}, ${2:v} in ipairs(${3:table}) do
+    ${4:print(i,v)}
+end

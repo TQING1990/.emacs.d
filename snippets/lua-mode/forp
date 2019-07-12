@@ -1,0 +1,6 @@
+# key: forp
+# name: forp
+# --
+for ${1:k}, ${2:v} in pairs(${3:}) do
+    ${4:print(k,v)}
+end
