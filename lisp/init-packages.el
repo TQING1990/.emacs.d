@@ -6,8 +6,7 @@
 
 (package-initialize)
 
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-			 ("melpa-stable" . "https://stable.melpa.org/packages/")))
+(setq package-archives '(("melpa-stable" . "https://stable.melpa.org/packages/")))
 
 ;; Add Packages
 (defvar tqing/packages '(
