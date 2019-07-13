@@ -34,6 +34,7 @@
 (require 'init-exec-path)
 (require 'init-smartparens)
 (require 'init-evil)
+(require 'init-git)
 (require 'init-theme)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))

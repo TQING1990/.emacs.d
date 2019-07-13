@@ -13,6 +13,7 @@
 (defvar tqing/packages '(
 			 company
 			 magit
+             git-gutter
 			 ivy
 			 swiper
 			 counsel
