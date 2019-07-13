@@ -9,7 +9,7 @@
 ;; 隐藏滑动条
 (scroll-bar-mode -1)
 ;; 显示行号
-(global-linum-mode t)
+(global-display-line-numbers-mode t)
 ;; (delete-selection-mode t)
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 ;; 高亮当前行
