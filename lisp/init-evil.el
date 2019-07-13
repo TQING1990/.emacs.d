@@ -75,6 +75,7 @@
   "fr" 'recentf-open-files
   "bb" 'switch-to-buffer
   "bk" 'kill-buffer
+  "kb" 'kill-current-buffer
   "sm" 'counsel-imenu
   "fg" 'counsel-git
   "bf" 'beginning-of-defun
