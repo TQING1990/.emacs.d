@@ -30,6 +30,7 @@
 			 evil-leader
 			 evil-surround
 			 evil-nerd-commenter
+			 evil-visualstar
 			 ;; --- Themes ---
 			 monokai-theme
 			 ) "Default packages.")
