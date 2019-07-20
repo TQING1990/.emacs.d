@@ -19,7 +19,7 @@
 ;; 关闭自动保存文件
 (setq auto-save-default nil)
 ;; 光标形状
-;; (setq-default cursor-type 'bar)
+(setq-default cursor-type 'bar)
 ;; 全屏显示
 (setq  initial-frame-alist (quote ((fullscreen . maximized))))
 ;; 设置默认字体大小
