@@ -30,8 +30,8 @@
 ;; (define-key evil-normal-state-map (kbd "C-w d") 'elscreen-kill)
 
 ;; c+ c- to increase/decrease number like Vim's C-a C-x
-(define-key evil-normal-state-map (kbd "C-+") 'evil-numbers/inc-at-pt)
-(define-key evil-normal-state-map (kbd "C--") 'evil-numbers/dec-at-pt)
+;; (define-key evil-normal-state-map (kbd "C-+") 'evil-numbers/inc-at-pt)
+;; (define-key evil-normal-state-map (kbd "C--") 'evil-numbers/dec-at-pt)
 
 (require 'evil-surround)
 (global-evil-surround-mode 1)
@@ -57,7 +57,6 @@
 ;; Vim key bindings
 (require 'evil-leader)
 (global-evil-leader-mode)
-(setq evil-leader/in-all-states 1)
 (evil-leader/set-key
   ;; comment
   "ci" 'evilnc-comment-or-uncomment-lines
