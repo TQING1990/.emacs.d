@@ -8,6 +8,9 @@
 (require 'evil)
 
 (evil-mode 1)
+(evilnc-default-hotkeys t)
+
+(global-evil-visualstar-mode)
 
 (setq evil-emacs-state-cursor '("red" box)
      evil-normal-state-cursor '("green" box)
@@ -25,6 +28,15 @@
 (define-key evil-normal-state-map (kbd "C-j") (lambda ()
                                                 (interactive)
                                                 (evil-scroll-down nil)))
+
+(evil-leader/set-key "o" (lambda () ; <leader>o open line below
+                           (interactive)
+                           (evil-open-below 1)
+                           (evil-normal-state)))
+(evil-leader/set-key "O" (lambda () ; <leader>o open line above
+                           (interactive)
+                           (evil-open-above 1)
+                           (evil-normal-state)))
 
 ;; elscreen kill
 ;; (define-key evil-normal-state-map (kbd "C-w d") 'elscreen-kill)
@@ -48,12 +60,12 @@
   (push '(?` . ("`" . "'")) evil-surround-pairs-alist))
 (add-hook 'emacs-lisp-mode-hook 'evil-surround-emacs-lisp-mode-hook-setup)
 
-(evilnc-default-hotkeys t)
 ;; Emacs key bindings
 (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
 (global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-line)
 (global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
 (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
+
 ;; Vim key bindings
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -74,20 +86,12 @@
   "ff" 'counsel-find-file
   "rf" 'recentf-open-files
   "kb" 'kill-current-buffer
+  "bb" 'evil-buffer
   "im" 'counsel-imenu
   "ib" 'counsel-ibuffer
   "fg" 'counsel-git
   "ag" 'counsel-ag
 )
-
-(evil-leader/set-key "o" (lambda () ; <leader>o open line below
-                           (interactive)
-                           (evil-open-below 1)
-                           (evil-normal-state)))
-(evil-leader/set-key "O" (lambda () ; <leader>o open line above
-                           (interactive)
-                           (evil-open-above 1)
-                           (evil-normal-state)))
 
 (provide 'init-evil)
 ;;; init-evil.el ends here
