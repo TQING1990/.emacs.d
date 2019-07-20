@@ -24,6 +24,8 @@
 (setq  initial-frame-alist (quote ((fullscreen . maximized))))
 ;; 设置默认字体大小
 (set-face-attribute 'default nil :height 160)
+;; 文件末尾不自动加空行
+(setq mode-require-final-newline nil)
 
 (require 'recentf)
 (recentf-mode 1)
