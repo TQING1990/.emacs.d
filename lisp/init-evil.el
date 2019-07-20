@@ -67,18 +67,17 @@
   "cr" 'comment-or-uncomment-region
   "cv" 'evilnc-toggle-invert-comment-line-by-line
   "."  'evilnc-copy-and-comment-operator
-  "\\" 'evilnc-comment-operator ; if you prefer backslash key
   "v"  'exchange-point-and-mark
   ;; other
-  "ff" 'counsel-find-file
-  "fr" 'recentf-open-files
-  "bb" 'switch-to-buffer
-  "bk" 'kill-buffer
-  "kb" 'kill-current-buffer
-  "sm" 'counsel-imenu
-  "fg" 'counsel-git
   "bf" 'beginning-of-defun
   "ef" 'end-of-defun
+  "ff" 'counsel-find-file
+  "rf" 'recentf-open-files
+  "kb" 'kill-current-buffer
+  "im" 'counsel-imenu
+  "ib" 'counsel-ibuffer
+  "fg" 'counsel-git
+  "ag" 'counsel-ag
 )
 
 (evil-leader/set-key "o" (lambda () ; <leader>o open line below
