@@ -76,6 +76,10 @@
   "yf" 'cp-fullpath-of-current-buffer
   "ck" 'clipboard-to-kill-ring
 
+  ;; neotree
+  "ntt" 'neotree-toggle
+  "ntf" 'neotree-find
+
   ;; comment
   "ci" 'evilnc-comment-or-uncomment-lines
   "cl" 'evilnc-quick-comment-or-uncomment-to-the-line

@@ -33,6 +33,7 @@
 			 evil-surround
 			 evil-nerd-commenter
 			 evil-visualstar
+             neotree
 			 ;; --- Themes ---
 			 monokai-theme
 			 ) "Default packages.")
