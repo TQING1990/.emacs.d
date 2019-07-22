@@ -94,12 +94,13 @@
   "cr" 'comment-or-uncomment-region
   "cv" 'evilnc-toggle-invert-comment-line-by-line
   "."  'evilnc-copy-and-comment-operator
-  "v"  'exchange-point-and-mark
+
   ;; other
+  "v"  'exchange-point-and-mark
   "bf" 'beginning-of-defun
   "ef" 'end-of-defun
   "ff" 'counsel-find-file
-  "rf" 'recentf-open-files
+  "rf" 'counsel-recentf
   "kb" 'kill-current-buffer
   "bb" 'evil-buffer
   "im" 'counsel-imenu
