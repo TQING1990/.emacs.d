@@ -6,11 +6,13 @@
 
 (package-initialize)
 
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+(setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
+             ("melpa" . "https://melpa.org/packages/")
 			 ("melpa-stable" . "https://stable.melpa.org/packages/")))
 
 ;; Add Packages
 (defvar tqing/packages '(
+             xclip
 			 company
 			 magit
              git-gutter

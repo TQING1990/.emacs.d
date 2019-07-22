@@ -25,6 +25,7 @@
 
 (require 'init-packages)
 (require 'init-default)
+(require 'init-clipboard)
 (require 'init-company)
 (require 'init-lua-mode)
 (require 'init-ivy)

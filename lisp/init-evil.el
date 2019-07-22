@@ -70,6 +70,12 @@
 (require 'evil-leader)
 (global-evil-leader-mode)
 (evil-leader/set-key
+  ;; clipboard
+  "yc" 'copy-to-clipboard
+  "yn" 'cp-filename-of-current-buffer
+  "yf" 'cp-fullpath-of-current-buffer
+  "ck" 'clipboard-to-kill-ring
+
   ;; comment
   "ci" 'evilnc-comment-or-uncomment-lines
   "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
