@@ -10,8 +10,11 @@
 (scroll-bar-mode -1)
 ;; 显示行号
 (global-display-line-numbers-mode t)
-;; (delete-selection-mode t)
+;; 粘贴时替换选中的区域文本
+(delete-selection-mode t)
+
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
 ;; 高亮当前行
 (global-hl-line-mode 1)
 ;; 关闭文件备份
