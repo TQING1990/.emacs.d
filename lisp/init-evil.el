@@ -10,6 +10,11 @@
 (evil-mode 1)
 (evilnc-default-hotkeys t)
 
+;; You may delete this setup to use Evil NORMAL state always.
+(dolist (p '((neotree-mode . emacs)
+             (dired-mode . emacs)))
+(evil-set-initial-state (car p) (cdr p)))
+
 (global-evil-visualstar-mode)
 
 (setq evil-emacs-state-cursor '("red" box)
