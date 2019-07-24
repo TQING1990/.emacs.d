@@ -14,6 +14,7 @@
 (defvar tqing/packages '(
              xclip
 			 company
+             company-statistics
 			 magit
              git-gutter
 			 ivy
