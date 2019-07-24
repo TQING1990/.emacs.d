@@ -43,6 +43,9 @@
                            (evil-open-above 1)
                            (evil-normal-state)))
 
+(define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
+(define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
+
 ;; elscreen kill
 ;; (define-key evil-normal-state-map (kbd "C-w d") 'elscreen-kill)
 
