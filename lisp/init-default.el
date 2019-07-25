@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+;; 关闭报警音
+(setq ring-bell-function 'ignore)
 ;; 打开 eamacs 时屏蔽主页
 (setq-default inhibit-splash-screen t)
 ;; 隐藏菜单栏
