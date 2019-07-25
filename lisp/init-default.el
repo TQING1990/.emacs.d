@@ -49,6 +49,9 @@
 ;; 当文件被修改，buffer自动更新
 (global-auto-revert-mode t)
 
+;; dired
+(put 'dired-find-alternate-file 'disabled nil)
+
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 10)
