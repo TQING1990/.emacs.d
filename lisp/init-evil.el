@@ -53,6 +53,9 @@
 ;; (define-key evil-normal-state-map (kbd "C-+") 'evil-numbers/inc-at-pt)
 ;; (define-key evil-normal-state-map (kbd "C--") 'evil-numbers/dec-at-pt)
 
+;; Move back the cursor one position when exiting insert mode
+(setq evil-move-cursor-back t)
+
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 (defun evil-surround-prog-mode-hook-setup ()
