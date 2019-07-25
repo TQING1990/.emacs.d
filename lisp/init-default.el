@@ -30,16 +30,13 @@
 ;; 文件末尾不自动加空行
 (setq mode-require-final-newline nil)
 
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-menu-items 10)
-
 (global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-h C-v") 'find-variable)
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
 ;; 用空格代替tab，设置tab 长度为4
-(setq-default tab-width 4 indent-tabs-mode nil)
+(setq-default tab-width 4
+              indent-tabs-mode nil)
 
 (defun remove-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
@@ -51,6 +48,10 @@
 
 ;; 当文件被修改，buffer自动更新
 (global-auto-revert-mode t)
+
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 10)
 
 (provide 'init-default)
 ;;; init-default.el ends here
