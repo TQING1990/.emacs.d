@@ -23,6 +23,7 @@
 			 counsel-etags
 			 counsel-gtags
 			 smartparens
+             wgrep
 			 ;; --- Major Mode ---
 			 lua-mode
 			 ;; --- Minor Mode ---
@@ -34,6 +35,11 @@
 			 evil-surround
 			 evil-nerd-commenter
 			 evil-visualstar
+             evil-numbers
+             evil-matchit
+             evil-escape
+
+             find-file-in-project
              neotree
 			 ;; --- Themes ---
 			 monokai-theme

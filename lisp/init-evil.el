@@ -12,6 +12,7 @@
 
 ;; You may delete this setup to use Evil NORMAL state always.
 (dolist (p '((neotree-mode . emacs)
+             (ivy-occur-mode . emacs)
              (dired-mode . emacs)))
 (evil-set-initial-state (car p) (cdr p)))
 
@@ -77,6 +78,21 @@
 (global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
 (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
 
+;; evil-numbers
+;; 使用=而不是+，不需要按shift
+(global-set-key (kbd "C-c =") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+(define-key evil-normal-state-map (kbd "+") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "-") 'evil-numbers/dec-at-pt)
+
+;; evil-escape
+(evil-escape-mode t)
+(setq-default evil-escape-key-sequence "kj")
+(setq-default evil-escape-delay 0.2)
+
+;; evil-matchit
+(global-evil-matchit-mode t)
+
 ;; Vim key bindings
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -101,17 +117,21 @@
   "cv" 'evilnc-toggle-invert-comment-line-by-line
   "."  'evilnc-copy-and-comment-operator
 
+  ;; file
+  "ff" 'find-file-in-project
+  "ft" 'find-file-in-project-at-point
+  "fs" 'find-file-in-project-by-selected
+  "fr" 'counsel-recentf
+  "fg" 'counsel-git
+
   ;; other
   "v"  'exchange-point-and-mark
   "bf" 'beginning-of-defun
   "ef" 'end-of-defun
-  "ff" 'counsel-find-file
-  "rf" 'counsel-recentf
   "kb" 'kill-current-buffer
   "bb" 'evil-buffer
   "im" 'counsel-imenu
   "ib" 'counsel-ibuffer
-  "fg" 'counsel-git
   "ag" 'counsel-ag
 )
 
