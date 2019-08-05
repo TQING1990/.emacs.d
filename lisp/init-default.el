@@ -54,6 +54,8 @@
 (global-auto-revert-mode t)
 
 ;; dired
+(require 'dired)
+(setq dired-dwim-target t)
 (put 'dired-find-alternate-file 'disabled nil)
 
 (require 'recentf)
