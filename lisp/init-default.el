@@ -17,6 +17,8 @@
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; 高亮当前行
 (global-hl-line-mode 1)
 ;; 关闭文件备份
