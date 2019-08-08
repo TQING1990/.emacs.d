@@ -16,6 +16,7 @@
    `((ditaa . t)
      (emacs-lisp . t)
      (latex . t)
+     (lua . t)
      (plantuml . t))))
 
 (provide 'init-org)
