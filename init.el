@@ -21,6 +21,12 @@
 (global-set-key (kbd "<f1>") 'open-my-init-file)
 
 
+(defun open-my-org-file()
+  "快捷打开ORG."
+  (interactive)
+  (find-file "~/org/README.org"))
+(global-set-key (kbd "<f2>") 'open-my-org-file)
+
 ;; Package
 
 (require 'init-packages)

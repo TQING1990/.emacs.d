@@ -41,6 +41,8 @@
 
              find-file-in-project
              neotree
+
+             htmlize
 			 ;; --- Themes ---
 			 monokai-theme
 			 ) "Default packages.")

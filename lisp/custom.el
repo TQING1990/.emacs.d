@@ -9,7 +9,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (wgrep find-file-in-project evil-escape evil-matchit xclip neotree git-gutter counsel-etags company magit ivy smartparens lua-mode exec-path-from-shell flycheck yasnippet evil evil-leader evil-surround evil-nerd-commenter monokai-theme))))
+    (htmlize wgrep find-file-in-project evil-escape evil-matchit xclip neotree git-gutter counsel-etags company magit ivy smartparens lua-mode exec-path-from-shell flycheck yasnippet evil evil-leader evil-surround evil-nerd-commenter monokai-theme))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
