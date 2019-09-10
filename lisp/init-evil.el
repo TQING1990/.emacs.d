@@ -11,8 +11,7 @@
 (evilnc-default-hotkeys t)
 
 ;; You may delete this setup to use Evil NORMAL state always.
-(dolist (p '((neotree-mode . emacs)
-             (ivy-occur-mode . emacs)
+(dolist (p '((ivy-occur-mode . emacs)
              (dired-mode . emacs)))
 (evil-set-initial-state (car p) (cdr p)))
 
@@ -106,6 +105,7 @@
   ;; neotree
   "ntt" 'neotree-toggle
   "ntf" 'neotree-find
+  "ntp" 'neotree-project-dir
 
   ;; comment
   "ci" 'evilnc-comment-or-uncomment-lines

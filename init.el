@@ -43,6 +43,7 @@
 (require 'init-electric-pair)
 (require 'init-evil)
 (require 'init-git)
+(require 'init-neotree)
 (require 'init-theme)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
