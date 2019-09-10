@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: lambda
+# key: lambda
+# --
+function($1)
+    ${2:-- TODO}
+end

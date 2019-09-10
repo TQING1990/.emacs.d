@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: local require
+# key: lr
+# --
+local $1 = require(\"$0\")
