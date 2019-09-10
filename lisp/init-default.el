@@ -41,6 +41,10 @@
 ;; 用空格代替tab，设置tab 长度为4
 (setq-default tab-width 4
               indent-tabs-mode nil)
+(setq indent-line-function 'insert-tab)
+
+;; 存盘前删除行末多余的空格/空行
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (defun remove-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
