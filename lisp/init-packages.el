@@ -22,7 +22,6 @@
 			 counsel
 			 counsel-etags
 			 counsel-gtags
-			 smartparens
              wgrep
 			 ;; --- Major Mode ---
 			 lua-mode

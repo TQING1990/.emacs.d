@@ -40,7 +40,7 @@
 (require 'init-flycheck)
 (require 'init-yasnippet)
 (require 'init-exec-path)
-(require 'init-smartparens)
+(require 'init-electric-pair)
 (require 'init-evil)
 (require 'init-git)
 (require 'init-theme)
