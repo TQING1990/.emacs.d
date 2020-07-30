@@ -23,8 +23,10 @@
 			 counsel-etags
 			 counsel-gtags
              wgrep
+             ox-gfm
 			 ;; --- Major Mode ---
 			 lua-mode
+             markdown-mode
 			 ;; --- Minor Mode ---
 			 exec-path-from-shell
 			 flycheck
