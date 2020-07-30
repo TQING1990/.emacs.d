@@ -2,6 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
+;; 设置环境变量
+(set-language-environment "UTF-8")
+
 ;; 关闭报警音
 (setq ring-bell-function 'ignore)
 ;; 打开 eamacs 时屏蔽主页
@@ -12,6 +15,8 @@
 (scroll-bar-mode -1)
 ;; 显示行号
 (global-display-line-numbers-mode t)
+;; 状态栏显示列号
+(column-number-mode t)
 ;; 粘贴时替换选中的区域文本
 (delete-selection-mode t)
 
