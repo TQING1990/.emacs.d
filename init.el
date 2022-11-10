@@ -46,6 +46,7 @@
 (require 'init-neotree)
 (require 'init-theme)
 (require 'init-markdown)
+(require 'init-smex)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
