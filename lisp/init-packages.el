@@ -44,7 +44,7 @@
              neotree
 
              htmlize
-			 smex
+			;;  smex
 			 ;; --- Themes ---
 			 monokai-theme
 			 ) "Default packages.")
