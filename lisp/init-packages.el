@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'cl)
+(require 'cl-lib)
 
 (package-initialize)
 
@@ -44,6 +44,7 @@
              neotree
 
              htmlize
+			 smex
 			 ;; --- Themes ---
 			 monokai-theme
 			 ) "Default packages.")
@@ -52,9 +53,9 @@
 
 (defun tqing/packages-installed-p ()
   "判断包是否安装."
-  (loop for pkg in tqing/packages
-        when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
+  (cl-loop for pkg in tqing/packages
+        when (not (package-installed-p pkg)) do (cl-return nil)
+	finally (cl-return t)))
 
 (unless (tqing/packages-installed-p)
      (message "%s" "Refreshing package database...")
