@@ -2,6 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
+;; Disable C-i to jump forward to restore TAB functionality in Org mode.
+;; 这必须要在加载 evil 之前执行，所以放在首行
+(setq evil-want-C-i-jump nil)
+
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 
@@ -84,6 +88,9 @@
 (define-key evil-normal-state-map (kbd "+") 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "-") 'evil-numbers/dec-at-pt)
 
+(define-key evil-normal-state-map (kbd "H") 'evil-first-non-blank)
+(define-key evil-normal-state-map (kbd "L") 'evil-end-of-line)
+
 ;; evil-escape
 (evil-escape-mode t)
 (setq-default evil-escape-key-sequence "kj")
@@ -118,11 +125,15 @@
   "."  'evilnc-copy-and-comment-operator
 
   ;; file
-  "ff" 'find-file-in-project
-  "ft" 'find-file-in-project-at-point
-  "fs" 'find-file-in-project-by-selected
+  "ff" 'my-find-file-in-project
+  "ft" 'my-find-file-in-project-at-point
+  "fs" 'my-find-file-in-project-by-selected
   "fr" 'counsel-recentf
   "fg" 'counsel-git
+  "fp" 'my-counsel-git-project
+
+  ;; jump to
+  "gd" 'counsel-etags-find-tag-at-point
 
   ;; other
   "v"  'exchange-point-and-mark

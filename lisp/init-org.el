@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(setq org-adapt-indentation t)
+
 (require 'ob-plantuml)
 (eval-after-load 'ob-plantuml
   (let ((jar-name "plantuml.jar")

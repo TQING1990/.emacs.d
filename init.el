@@ -31,12 +31,12 @@
 
 (require 'init-packages)
 (require 'init-default)
+(require 'init-project)
 (require 'init-org)
 (require 'init-clipboard)
 (require 'init-company)
 (require 'init-lua-mode)
 (require 'init-ivy)
-(require 'init-tags)
 (require 'init-flycheck)
 (require 'init-yasnippet)
 (require 'init-exec-path)
@@ -47,6 +47,8 @@
 (require 'init-theme)
 (require 'init-markdown)
 ;; (require 'init-smex)
+;; (require 'init-citre)
+(require 'init-tags)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)

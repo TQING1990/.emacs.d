@@ -24,6 +24,7 @@
 			 counsel-gtags
              wgrep
              ox-gfm
+             citre
 			 ;; --- Major Mode ---
 			 lua-mode
              markdown-mode
