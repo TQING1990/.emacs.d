@@ -47,7 +47,6 @@
 (require 'init-neotree)
 (require 'init-theme)
 (require 'init-markdown)
-;; (require 'init-smex)
 ;; (require 'init-citre)
 (require 'init-tags)
 
