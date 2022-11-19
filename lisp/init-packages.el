@@ -21,7 +21,6 @@
 			 swiper
 			 counsel
 			 counsel-etags
-			 counsel-gtags
              wgrep
              ox-gfm
              citre
