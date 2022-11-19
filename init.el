@@ -32,6 +32,7 @@
 (require 'init-packages)
 (require 'init-default)
 (require 'init-project)
+(require 'init-ffip)
 (require 'init-org)
 (require 'init-clipboard)
 (require 'init-company)

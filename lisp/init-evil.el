@@ -125,9 +125,9 @@
   "."  'evilnc-copy-and-comment-operator
 
   ;; file
-  "ff" 'my-find-file-in-project
-  "ft" 'my-find-file-in-project-at-point
-  "fs" 'my-find-file-in-project-by-selected
+  "ff" 'find-file-in-project
+  "ft" 'find-file-in-project-at-point
+  "fs" 'find-file-in-project-by-selected
   "fr" 'counsel-recentf
   "fg" 'counsel-git
   "fp" 'my-counsel-git-project
