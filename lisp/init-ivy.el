@@ -3,6 +3,8 @@
 ;;; Code:
 
 (require 'ivy)
+(require 'counsel)
+(require 'init-project)
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -20,10 +22,17 @@ INITIAL-INPUT can be given as the initial minibuffer input."
   (interactive)
   (counsel-require-program counsel-git-cmd)
   (let ((default-directory (or dir (counsel-locate-git-root))))
-    (ivy-read "Find file: " (counsel-git-cands)
+    (ivy-read "Find file: " (counsel-git-cands default-directory)
               :initial-input initial-input
               :action #'counsel-git-action
+              :history 'counsel-git-history
               :caller 'counsel-git)))
+
+(defun my-counsel-git-project ()
+  "My counsel git."
+  (interactive)
+  (my-counsel-git (get-git-top-level-recursive))
+)
 
 (provide 'init-ivy)
 ;;; init-ivy.el ends here
