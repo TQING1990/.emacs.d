@@ -4,6 +4,7 @@
 
 (require 'citre)
 (require 'citre-config)
+(require 'init-project)
 
 (setq citre-readtags-program "/opt/local/bin/ureadtags")
 (setq citre-ctags-program "/opt/local/bin/uctags")

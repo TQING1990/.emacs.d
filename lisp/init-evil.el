@@ -10,9 +10,16 @@
 (evil-leader/set-leader ",")
 
 (require 'evil)
+;; (require 'undo-redo)
 
 (evil-mode 1)
 (evilnc-default-hotkeys t)
+
+(evil-set-undo-system 'undo-redo)
+
+;; (global-undo-redo-tree)
+;; (setq evil-undo-system 'undo-redo)
+;; (add-hook 'evil-local-mode-hook 'turn-on-undo-redo-tree-mode)
 
 ;; You may delete this setup to use Evil NORMAL state always.
 (dolist (p '((ivy-occur-mode . emacs)
@@ -30,6 +37,7 @@
 
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
 
 (define-key evil-normal-state-map (kbd "C-k") (lambda ()
                                                 (interactive)
@@ -77,9 +85,9 @@
 
 ;; Emacs key bindings
 (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
-(global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-line)
-(global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
-(global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
+;; (global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-line)
+;; (global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
+;; (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
 
 ;; evil-numbers
 ;; 使用=而不是+，不需要按shift
@@ -90,6 +98,12 @@
 
 (define-key evil-normal-state-map (kbd "H") 'evil-first-non-blank)
 (define-key evil-normal-state-map (kbd "L") 'evil-end-of-line)
+(define-key evil-visual-state-map (kbd "H") 'evil-first-non-blank)
+(define-key evil-visual-state-map (kbd "L") 'evil-end-of-line)
+
+;; org
+(define-key evil-normal-state-map (kbd "C-c s") 'org-table-cut-region)
+
 
 ;; evil-escape
 (evil-escape-mode t)

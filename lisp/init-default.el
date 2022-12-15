@@ -62,6 +62,9 @@
 ;; 当文件被修改，buffer自动更新
 (global-auto-revert-mode t)
 
+;; 自动换行
+(global-visual-line-mode 1)
+
 ;; dired
 (require 'dired)
 (setq dired-dwim-target t)
